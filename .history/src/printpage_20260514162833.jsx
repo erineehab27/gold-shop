@@ -314,10 +314,9 @@
 
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 export default function PrintPage() {
   const { state } = useLocation();
-  const navigate = useNavigate();
 
   const {
     customer,
@@ -422,14 +421,9 @@ export default function PrintPage() {
     <div style={{ padding: "20px" }}>
       <div className="print-header">
   <h1>💎 العفاريتي</h1>
-  <button className="arrow" onClick={() => navigate("/")}>⬅</button>
  
 </div>
-<div style={{ marginBottom: "15px" }}>
-        <h2>اسم العميل: {customer.name}</h2>
-        <p>📞 رقم التليفون: {customer.phone}</p>
-        <p>📝 ملاحظات: {customer.notes}</p>
-      </div>
+      
 
       <h3>الأصناف</h3>
 

@@ -90,6 +90,8 @@ export default function App() {
     <div className="app">
       <h1>العفاريتي لتجاره الدهب و المجوهرات</h1>
 
+      <button className="plus" onClick={() => setShowForm(!showForm)}>➕</button>
+
       {/* ✅ بيانات العميل */}
       <section className="card">
         <h2>بيانات العميل</h2>

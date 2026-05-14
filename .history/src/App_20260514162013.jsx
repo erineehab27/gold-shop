@@ -97,11 +97,11 @@ export default function App() {
         <label>اسم العميل</label>
         <input value={customerName} onChange={(e) => setCustomerName(e.target.value)} />
 
-        <label>رقم التليفون</label>
+        {/* <label>رقم التليفون</label>
         <input value={customerPhone} onChange={(e) => setCustomerPhone(e.target.value)} />
 
         <label>ملاحظات</label>
-        <textarea value={customerNotes} onChange={(e) => setCustomerNotes(e.target.value)} />
+        <textarea value={customerNotes} onChange={(e) => setCustomerNotes(e.target.value)} /> */}
       </section>
 
       <section className="card">

@@ -314,10 +314,9 @@
 
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 export default function PrintPage() {
   const { state } = useLocation();
-  const navigate = useNavigate();
 
   const {
     customer,
