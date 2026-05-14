@@ -154,9 +154,9 @@ label {
 }
 
 .print-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 150px;
 }
 
 .print-header h1 {
@@ -166,6 +166,5 @@ label {
 
 .print-header p {
   margin: 2px 0;
-  font-size: 20px;
-  text-align: right;
+  font-size: 14px;
 }

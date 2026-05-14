@@ -122,9 +122,6 @@ label {
   button {
     display: none;
   }
-  @page {
-    margin-bottom: 0;
-  }
 }
 
 .arrow{
@@ -153,19 +150,6 @@ label {
 
 }
 
-.print-header {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-.print-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.print-header p {
-  margin: 2px 0;
-  font-size: 20px;
-  text-align: right;
+title{
+  f
 }

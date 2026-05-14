@@ -419,10 +419,7 @@ export default function PrintPage() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <div className="print-header">
-  <h1>💎 العفاريتي</h1>
- 
-</div>
+      
       <h2>اسم العميل: {customer.name}</h2>
 
       <h3>الأصناف</h3>
@@ -492,15 +489,7 @@ export default function PrintPage() {
       <br />
 
       <button className="add print-btn" onClick={() => window.print()}>🖨️ طباعة</button>
-      <div className="print-header">
-      <p>العنوان: ٣ عاطفه الهمشري -  الباب الثاني - الصاغة - القاهرة</p>
-  <p>📞whatsapp:01211014438 </p>
-  <hr />
-      </div>
     </div>
-
-    
-     
   );
 }
 

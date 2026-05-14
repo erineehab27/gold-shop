@@ -492,15 +492,12 @@ export default function PrintPage() {
       <br />
 
       <button className="add print-btn" onClick={() => window.print()}>🖨️ طباعة</button>
-      <div className="print-header">
-      <p>العنوان: ٣ عاطفه الهمشري -  الباب الثاني - الصاغة - القاهرة</p>
-  <p>📞whatsapp:01211014438 </p>
-  <hr />
-      </div>
     </div>
 
-    
-     
+    <d
+     <p>العنوان: شبرا - القاهرة</p>
+     <p>📞 01000000000</p>
+     <hr />
   );
 }
 

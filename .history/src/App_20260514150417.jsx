@@ -627,9 +627,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>العفاريتي 
-        لتجاره الدهب و المجوهرات
-      </h1>
+      <h1>Gold Shop System</h1>
 
     
      <button className="plus" onClick={() => setShowForm(!showForm)}>
