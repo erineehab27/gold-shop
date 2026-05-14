@@ -164,12 +164,8 @@ label {
   font-size: 28px;
   text-align: right;
 
-}
-.textp{
-  color: #d4af37;
-  font-weight: bold;
-
-}
+}{}
+.textp
 .print-header p {
   margin: 2px 0;
   font-size: 20px;

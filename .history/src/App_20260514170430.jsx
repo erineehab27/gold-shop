@@ -124,17 +124,12 @@ export default function App() {
             {items.map((item, i) => {
               const count = Number(item.count || 0);
               const weight = Number(item.weight || 0);
-              const karat = Number(item.karat || 0);
               const workmanship = Number(item.workmanship || 0);
 
               let itemWeight = count * weight;
-              let itemWork = 0;
-
-              if (item.type === "piece") {
-                itemWork = count * workmanship;
-              } else {
-                itemWork = itemWeight * workmanship;
-              }
+              let itemWork = item.type === "piece"
+                ? count * workmanship
+                : itemWeight * workmanship;
 
               return (
                 <tr key={i}>
@@ -148,11 +143,13 @@ export default function App() {
                       <option value="piece">قطعة</option>
                     </select>
                   </td>
+                 
                   <td><input onChange={(e) => handleItemChange(i, "workmanship", e.target.value)} /></td>
                   <td>
                     وزن: {fix(itemWeight)} <br />
                     مصنعية: {fix(itemWork)} <br />
                     عيار: {karat === 24 ? "24" : "21"}
+                  </td>
                   </td>
                 </tr>
               );

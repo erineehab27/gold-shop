@@ -124,17 +124,12 @@ export default function App() {
             {items.map((item, i) => {
               const count = Number(item.count || 0);
               const weight = Number(item.weight || 0);
-              const karat = Number(item.karat || 0);
               const workmanship = Number(item.workmanship || 0);
 
               let itemWeight = count * weight;
-              let itemWork = 0;
-
-              if (item.type === "piece") {
-                itemWork = count * workmanship;
-              } else {
-                itemWork = itemWeight * workmanship;
-              }
+              let itemWork = item.type === "piece"
+                ? count * workmanship
+                : itemWeight * workmanship;
 
               return (
                 <tr key={i}>
@@ -151,8 +146,7 @@ export default function App() {
                   <td><input onChange={(e) => handleItemChange(i, "workmanship", e.target.value)} /></td>
                   <td>
                     وزن: {fix(itemWeight)} <br />
-                    مصنعية: {fix(itemWork)} <br />
-                    عيار: {karat === 24 ? "24" : "21"}
+                    مصنعية: {fix(itemWork)}
                   </td>
                 </tr>
               );
@@ -164,34 +158,6 @@ export default function App() {
 
         <hr />
         
-        <h3>حساب قديم</h3>
-        <label>وزن 21</label>
-        <input placeholder="وزن 21" onChange={(e) => setOldGold(e.target.value)} />
-        <label> مصنعيه</label>
-        <input placeholder="مصنعية" onChange={(e) => setOldWorkmanship(e.target.value)} />
-
-        <hr />
-
-        <h3>سداد جديد</h3>
-        <label> سداد دهب 21</label>
-        <input placeholder="سداد دهب 21" onChange={(e) => setPayGold(e.target.value)} />
-        <label>سداد دهب 24</label>
-        <input placeholder="سداد دهب 24" onChange={(e) => setPayGold24(e.target.value)} />
-
-        {/* 🔥 السبيكة */}
-        <label>وزن سبيكه</label>
-        <input placeholder="وزن سبيكة" onChange={(e) => setBarWeight(e.target.value)} />
-        <label>عيار سبيكه</label>
-        <input placeholder="عيار سبيكة" onChange={(e) => setBarKarat(e.target.value)} />
-        <label>مكافئ 21</label>
-        <input value={fix(barEquivalent21)} readOnly placeholder="مكافئ 21" />
-
-        <label>سداد مصنعيه</label>
-        <input placeholder="سداد مصنعية" onChange={(e) => setPayWorkmanshipNow(e.target.value)} />
-        <label>كاش باك</label>
-        <input placeholder="كاش باك" onChange={(e) => setCashBack(e.target.value)} />
-
-        <hr />
 
         <h3>الإجماليات</h3>
         <p>وزن 21: {fix(totalWeight21)}</p>

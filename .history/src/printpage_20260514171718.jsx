@@ -422,7 +422,7 @@ export default function PrintPage() {
     <div style={{ padding: "20px" }}>
       <div >
   <h1> العفاريتي</h1>
-  <p className="textp">لتجارة الذهب و المجوهرات</p>
+  <p>لتجاره الذ</p>
   <button className="arrow" onClick={() => navigate("/")}>⬅</button>
  
 </div>

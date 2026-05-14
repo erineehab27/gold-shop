@@ -107,58 +107,7 @@ export default function App() {
       <section className="card">
         <h2>الأصناف</h2>
 
-        <table>
-          <thead>
-            <tr>
-              <th>الصنف</th>
-              <th>عدد</th>
-              <th>وزن</th>
-              <th>عيار</th>
-              <th>نوع</th>
-              <th>مصنعية</th>
-              <th>الإجمالي</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {items.map((item, i) => {
-              const count = Number(item.count || 0);
-              const weight = Number(item.weight || 0);
-              const karat = Number(item.karat || 0);
-              const workmanship = Number(item.workmanship || 0);
-
-              let itemWeight = count * weight;
-              let itemWork = 0;
-
-              if (item.type === "piece") {
-                itemWork = count * workmanship;
-              } else {
-                itemWork = itemWeight * workmanship;
-              }
-
-              return (
-                <tr key={i}>
-                  <td><input onChange={(e) => handleItemChange(i, "name", e.target.value)} /></td>
-                  <td><input onChange={(e) => handleItemChange(i, "count", e.target.value)} /></td>
-                  <td><input onChange={(e) => handleItemChange(i, "weight", e.target.value)} /></td>
-                  <td><input onChange={(e) => handleItemChange(i, "karat", e.target.value)} /></td>
-                  <td>
-                    <select onChange={(e) => handleItemChange(i, "type", e.target.value)}>
-                      <option value="gram">جرام</option>
-                      <option value="piece">قطعة</option>
-                    </select>
-                  </td>
-                  <td><input onChange={(e) => handleItemChange(i, "workmanship", e.target.value)} /></td>
-                  <td>
-                    وزن: {fix(itemWeight)} <br />
-                    مصنعية: {fix(itemWork)} <br />
-                    عيار: {karat === 24 ? "24" : "21"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        
 
         <button className="add" onClick={addRow}>➕ إضافة صنف</button>
 
