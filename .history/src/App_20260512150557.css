@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #f5f5f5;
+  direction: rtl;
+  font-size: 25px;
+}
+
+.app {
+  padding: 24px;
+}
+
+h1 {
+  color: #d4af37;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select {
+  background: #222;
+  color: white;
+  font-size: 25px;
+}
+
+.add {
+  background: #d4af37;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  width: 10%;
+  margin-right:  800px;
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.customer {
+  padding: 12px;
+  background: #222;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.customer:hover {
+  background: #333;
+}
+
+.customer span {
+  display: block;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #222;
+  color: #d4af37;
+}
+
+.debt {
+  color: #ff6b6b;
+}
+
+.credit {
+  color: #4ade80;
+}
+
+.plus{
+  width: 50px;
+  background: #d4af37;
+
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+
+}
+
+@media print {
+  button {
+    display: none;
+  }
+}
+
+.arrow{
+  
+}

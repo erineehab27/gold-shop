@@ -1,0 +1,27 @@
+{
+  "name": "gold-shop-system",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:electron\"",
+    "dev:web": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "build": "vite build",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "better-sqlite3": "latest",
+    "concurrently": "^9.2.1",
+    "electron": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "^7.15.0",
+    "vite": "latest",
+    "wait-on": "latest"
+  },
+  "devDependencies": {
+    "electron-builder": "latest"
+  }
+}
