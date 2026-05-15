@@ -481,7 +481,7 @@ const { barWorkmanship } = state || {};
       {barEquivalent21 ? (
         <p>مكافئ 21: {fix(barEquivalent21)}</p>
       ) : null}
-      {barWorkmanship && <p>أجرة السبيكة: {fix(barWorkmanship)}</p>}
+      {barWorkmanship && <p>أجرة السبيكة: {fix(barWorkmanship)}</p>}pm
 
       {payWorkmanshipNow && <p>مصنعية: {payWorkmanshipNow}</p>}
       {cashBack && <p>كاش باك: {cashBack}</p>}

@@ -473,8 +473,7 @@ export default function App() {
                 payWorkmanshipNow,
                 cashBack,
                 barWeight,
-                barKarat,
-                barWorkmanship
+                barKarat
               }
             });
 

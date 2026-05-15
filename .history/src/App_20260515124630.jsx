@@ -429,12 +429,7 @@ export default function App() {
         <input placeholder="عيار سبيكة" onChange={(e) => setBarKarat(e.target.value)} />
         <label>مكافئ 21</label>
         <input value={fix(barEquivalent21)} readOnly placeholder="مكافئ 21" />
-        <label>أجرة السبيكة</label>
-<input
-  value={fix(barWorkmanship)}
-  readOnly
-  placeholder="أجرة السبيكة"
-/>
+        
 
         <label>سداد مصنعيه</label>
         <input placeholder="سداد مصنعية" onChange={(e) => setPayWorkmanshipNow(e.target.value)} />
@@ -473,8 +468,7 @@ export default function App() {
                 payWorkmanshipNow,
                 cashBack,
                 barWeight,
-                barKarat,
-                barWorkmanship
+                barKarat
               }
             });
 
