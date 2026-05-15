@@ -315,7 +315,7 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./App.css";
+
 export default function PrintPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -429,7 +429,7 @@ const { barWorkmanship } = state || {};
   <button className="arrow" onClick={() => navigate("/")}>⬅</button>
  
 </div>
-<div style={{ marginBottom: "15px"  }}>
+<div style={{ marginBottom: "15px" }}>
         <h2>اسم العميل: {customer.name}</h2>
         {/* <p>📞 رقم التليفون: {customer.phone}</p>
         <p>📝 ملاحظات: {customer.notes}</p> */}

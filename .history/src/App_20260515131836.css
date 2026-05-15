@@ -62,7 +62,7 @@ select {
 
 .customer {
   padding: 12px;
-  background: #222;
+  background: #111;
   margin-bottom: 8px;
   border-radius: 10px;
   cursor: pointer;
@@ -122,14 +122,9 @@ label {
   button {
     display: none;
   }
-  * {
-    color: black !important;
-  }
-
   @page {
     margin-bottom: 0;
   }
-  
 }
 
 .arrow{
@@ -138,7 +133,7 @@ label {
   font-weight: bold;
   cursor: pointer;
   width: 90px;
-  margin-right:  1450px;
+  margin-right:  1000px;
   /* margin-top: 50px; */
   font-size: 25px;
 }

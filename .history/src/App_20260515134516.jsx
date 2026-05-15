@@ -322,9 +322,9 @@ export default function App() {
     payGold24_to21 +
     barEquivalent21;
 
-    const totalPaidWork =
+  const totalPaidWork =
     Number(payWorkmanshipNow || 0) +
-    Number(cashBack || 0) +
+    Number(cashBack || 0);
     barWorkmanship;
 
   const remainingGold = fix(totalWeight21 - totalPaidGold);

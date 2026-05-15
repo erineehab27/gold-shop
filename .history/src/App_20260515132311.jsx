@@ -315,22 +315,20 @@ export default function App() {
 
   const payGold24_to21 = (Number(payGold24 || 0) * 999.9) / 875;
   const barEquivalent21 = (Number(barWeight || 0) * Number(barKarat || 0)) / 875;
-  const barWorkmanship = Number(barEquivalent21 || 0) * 8;
+  const barWorkmanship = Number(barEquivalent21 || 0) * 8;               اجره 
 
   const totalPaidGold =
     Number(payGold || 0) +
     payGold24_to21 +
     barEquivalent21;
 
-    const totalPaidWork =
+  const totalPaidWork =
     Number(payWorkmanshipNow || 0) +
-    Number(cashBack || 0) +
+    Number(cashBack || 0);
     barWorkmanship;
 
   const remainingGold = fix(totalWeight21 - totalPaidGold);
-  const remainingWork = fix(
-    totalWorkmanship - totalPaidWork
-  );
+  const remainingWork = fix(totalWorkmanship - totalPaidWork);
 
   return (
     <div className="app">

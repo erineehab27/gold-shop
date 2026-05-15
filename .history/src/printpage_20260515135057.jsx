@@ -429,7 +429,7 @@ const { barWorkmanship } = state || {};
   <button className="arrow" onClick={() => navigate("/")}>⬅</button>
  
 </div>
-<div style={{ marginBottom: "15px"  }}>
+<div style={{ marginBottom: "15px" , color:#111" }}>
         <h2>اسم العميل: {customer.name}</h2>
         {/* <p>📞 رقم التليفون: {customer.phone}</p>
         <p>📝 ملاحظات: {customer.notes}</p> */}
