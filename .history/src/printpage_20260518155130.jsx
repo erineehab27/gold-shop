@@ -473,7 +473,7 @@ const { barWorkmanship } = state || {};
 
       <h3>سداد جديد</h3>
 
-      {payGold && <p>دهب (21): {payGold}</p>}
+      {payGold && <p>دهب 21: {payGold}</p>}
       {payGold24 && <p>دهب 24: {payGold24}</p>}
 
       {/* 🔥 السبيكة */}

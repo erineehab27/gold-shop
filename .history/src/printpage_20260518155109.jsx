@@ -473,7 +473,7 @@ const { barWorkmanship } = state || {};
 
       <h3>سداد جديد</h3>
 
-      {payGold && <p>دهب (21): {payGold}</p>}
+      {payGold && <p>دهب 21: {payGold}</p>}
       {payGold24 && <p>دهب 24: {payGold24}</p>}
 
       {/* 🔥 السبيكة */}
@@ -496,7 +496,7 @@ const { barWorkmanship } = state || {};
       <p>إجمالي الوزن (21): {fix(totalWeight21)}</p>
       <p>إجمالي المصنعية: {fix(totalWorkmanship)}</p>
 
-      <p>المدفوع ذهب (21): {fix(totalPaidGold)}</p>
+      <p>المدفوع ذهب 21): {fix(totalPaidGold)}</p>
       <p>المدفوع مصنعية: {fix(totalPaidWork)}</p>
 
       <h3>المتبقي</h3>
