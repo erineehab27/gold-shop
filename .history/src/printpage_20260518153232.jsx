@@ -496,7 +496,7 @@ const { barWorkmanship } = state || {};
       <p>إجمالي الوزن (21): {fix(totalWeight21)}</p>
       <p>إجمالي المصنعية: {fix(totalWorkmanship)}</p>
 
-      <p>المدفوع ذهب عيار 21: {fix(totalPaidGold)}</p>
+      <p>المدفوع ذهب: {fix(totalPaidGold)}</p>
       <p>المدفوع مصنعية: {fix(totalPaidWork)}</p>
 
       <h3>المتبقي</h3>

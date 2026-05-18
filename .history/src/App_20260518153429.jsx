@@ -452,7 +452,7 @@ export default function App() {
         <p>مدفوع مصنعية: {fix(totalPaidWork)}</p>
 
         <h3>المتبقي</h3>
-        <p>ذهب عيار 21 : {remainingGold}</p>
+        <p>ذ {remainingGold}</p>
         <p>مصنعية: {remainingWork}</p>
 
         <button

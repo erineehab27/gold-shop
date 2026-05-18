@@ -448,11 +448,11 @@ export default function App() {
         <h3>الإجماليات</h3>
         <p>وزن 21: {fix(totalWeight21)}</p>
         <p>مصنعية: {fix(totalWorkmanship)}</p>
-        <p>مدفوع ذهب عيار 21 : {fix(totalPaidGold)}</p>
+        <p>مدفوع ذهب عيار 21  {fix(totalPaidGold)}</p>
         <p>مدفوع مصنعية: {fix(totalPaidWork)}</p>
 
         <h3>المتبقي</h3>
-        <p>ذهب عيار 21 : {remainingGold}</p>
+        <p>ذهب: {remainingGold}</p>
         <p>مصنعية: {remainingWork}</p>
 
         <button
