@@ -543,54 +543,25 @@ export default function App() {
   };
 
   // 🔥 نحسب الوزن والمصنعية لكل صنف ونخزنهم
-  // const itemsWithTotals = items.map((item) => {
-  //   const count = Number(item.count || 0);
-  //   const weight = Number(item.weight || 0);
-  //   const workmanship = Number(item.workmanship || 0);
-
-  //   let itemWeight = count * weight;
-
-  //   let itemWork =
-  //     item.type === "piece"
-  //       ? count * workmanship
-  //       : itemWeight * workmanship;
-  //       let weight21 = 0;
-
-  //   if (karat === 24) weight21 = (itemWeight * 999.9) / 875;
-  //   else if (karat === 21) weight21 = itemWeight;
-  //   else weight21 = (itemWeight * karat) / 875;
-
-  //   totalWeight21 += weight21;
-  //   totalWorkmanship += itemWork;
-
-  //   return {
-  //     ...item,
-  //     itemWeight,
-  //     itemWork,
-  //     karat
-      
-  //   };
-  // });
   const itemsWithTotals = items.map((item) => {
     const count = Number(item.count || 0);
     const weight = Number(item.weight || 0);
     const workmanship = Number(item.workmanship || 0);
-    const karat = Number(item.karat || 0); // ✅ مهم
-  
+
     let itemWeight = count * weight;
-  
+
     let itemWork =
       item.type === "piece"
         ? count * workmanship
         : itemWeight * workmanship;
-  
+
     return {
       ...item,
       itemWeight,
-      itemWork,
-      karat
+      itemWork
     };
   });
+
   // 🔥 الإجماليات
   let totalWeight21 = 0;
   let totalWorkmanship = 0;
@@ -672,15 +643,14 @@ export default function App() {
                 <td><input onChange={(e) => handleItemChange(i, "workmanship", e.target.value)} /></td>
                 <td>
                   وزن: {fix(item.itemWeight)} <br />
-                  مصنعية: {fix(item.itemWork)} <br/>
-                  عيار: {item.karat === 24 ? "24" : "21"}
+                  مصنعية: {fix(item.itemWork)}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
 
-        <button className="add" onClick={addRow}>➕ إضافة صنف</button>
+        <button onClick={addRow}>➕ إضافة صنف</button>
 
         <hr />
      
@@ -694,40 +664,49 @@ export default function App() {
        <hr />
 
          <h3>سداد جديد</h3>
-         <label> سداد دهب 21</label>
-         <input placeholder="سداد دهب 21" onChange={(e) => setPayGold(e.target.value)} />
-         <label>سداد دهب 24</label>
-        <input placeholder="سداد دهب 24" onChange={(e) => setPayGold24(e.target.value)} />
+//         <label> سداد دهب 21</label>
+//         <input placeholder="سداد دهب 21" onChange={(e) => setPayGold(e.target.value)} />
+//         <label>سداد دهب 24</label>
+//         <input placeholder="سداد دهب 24" onChange={(e) => setPayGold24(e.target.value)} />
 
-         {/* 🔥 السبيكة */}
-         <label>وزن سبيكه</label>
-        <input placeholder="وزن سبيكة" onChange={(e) => setBarWeight(e.target.value)} />
-         <label>عيار سبيكه</label>
-         <input placeholder="عيار سبيكة" onChange={(e) => setBarKarat(e.target.value)} />
-         <label>مكافئ 21</label>
+//         {/* 🔥 السبيكة */}
+//         <label>وزن سبيكه</label>
+//         <input placeholder="وزن سبيكة" onChange={(e) => setBarWeight(e.target.value)} />
+//         <label>عيار سبيكه</label>
+//         <input placeholder="عيار سبيكة" onChange={(e) => setBarKarat(e.target.value)} />
+//         <label>مكافئ 21</label>
          <input value={fix(barEquivalent21)} readOnly placeholder="مكافئ 21" />
          <label>أجرة السبيكة</label>
  <input
-  value={fix(barWorkmanship)}
-  readOnly
-  placeholder="أجرة السبيكة"
-/>
+//   value={fix(barWorkmanship)}
+//   readOnly
+//   placeholder="أجرة السبيكة"
+// />
 
-        <label>سداد مصنعيه</label>
-        <input placeholder="سداد مصنعية" onChange={(e) => setPayWorkmanshipNow(e.target.value)} />
-        <label>كاش باك</label>
-        <input placeholder="كاش باك" onChange={(e) => setCashBack(e.target.value)} />
+//         <label>سداد مصنعيه</label>
+//         <input placeholder="سداد مصنعية" onChange={(e) => setPayWorkmanshipNow(e.target.value)} />
+//         <label>كاش باك</label>
+//         <input placeholder="كاش باك" onChange={(e) => setCashBack(e.target.value)} />
 
-        <hr />
+//         <hr />
+
+//         <h3>الإجماليات</h3>
+//         <p>وزن (21): {fix(totalWeight21)}</p>
+//         <p>مصنعية: {fix(totalWorkmanship)}</p>
+//         <p>مدفوع ذهب عيار (21) : {fix(totalPaidGold)}</p>
+//         <p>مدفوع مصنعية: {fix(totalPaidWork)}</p>
+
+//         <h3>المتبقي</h3>
+//         <p>ذهب عيار (21) : {remainingGold}</p>
+//         <p>مصنعية: {remainingWork}</p>
+
 
         <h3>الإجماليات</h3>
-        <p>وزن (21): {fix(totalWeight21)}</p>
+        <p>وزن: {fix(totalWeight21)}</p>
         <p>مصنعية: {fix(totalWorkmanship)}</p>
-        <p>مدفوع ذهب عيار (21) : {fix(totalPaidGold)}</p>
-        <p>مدفوع مصنعية: {fix(totalPaidWork)}</p>
 
         <h3>المتبقي</h3>
-        <p>ذهب عيار (21) : {remainingGold}</p>
+        <p>ذهب: {remainingGold}</p>
         <p>مصنعية: {remainingWork}</p>
 
         <button className="add"

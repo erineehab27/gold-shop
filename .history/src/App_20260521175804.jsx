@@ -571,26 +571,7 @@ export default function App() {
       
   //   };
   // });
-  const itemsWithTotals = items.map((item) => {
-    const count = Number(item.count || 0);
-    const weight = Number(item.weight || 0);
-    const workmanship = Number(item.workmanship || 0);
-    const karat = Number(item.karat || 0); // ✅ مهم
-  
-    let itemWeight = count * weight;
-  
-    let itemWork =
-      item.type === "piece"
-        ? count * workmanship
-        : itemWeight * workmanship;
-  
-    return {
-      ...item,
-      itemWeight,
-      itemWork,
-      karat
-    };
-  });
+
   // 🔥 الإجماليات
   let totalWeight21 = 0;
   let totalWorkmanship = 0;

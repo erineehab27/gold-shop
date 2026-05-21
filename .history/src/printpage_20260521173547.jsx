@@ -661,8 +661,7 @@ export default function PrintPage() {
               {/* ✅ الجزء المهم */}
               <td>
                 وزن: {fix(item.itemWeight)} <br />
-                مصنعية: {fix(item.itemWork)}<br/>
-                عيار:{fix(item.karat)}
+                مصنعية: {fix(item.itemWork)}
               </td>
             </tr>
           ))}

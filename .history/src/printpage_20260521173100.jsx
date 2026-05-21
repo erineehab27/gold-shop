@@ -661,8 +661,7 @@ export default function PrintPage() {
               {/* ✅ الجزء المهم */}
               <td>
                 وزن: {fix(item.itemWeight)} <br />
-                مصنعية: {fix(item.itemWork)}<br/>
-                عيار:{fix(item.karat)}
+                مصنعية: {fix(item.itemWork)}
               </td>
             </tr>
           ))}
@@ -710,7 +709,7 @@ export default function PrintPage() {
 
       <br />
 
-      <button className="add print-btn" onClick={() => window.print()}>🖨️ طباعة</button>
+      <button onClick={() => window.print()}>🖨️ طباعة</button>
 
       <div className="print-header">
         <p>العنوان: ٣ عاطفه الهمشري - الباب الثاني - الصاغة - القاهرة</p>

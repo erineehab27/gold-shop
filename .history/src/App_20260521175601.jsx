@@ -543,54 +543,35 @@ export default function App() {
   };
 
   // 🔥 نحسب الوزن والمصنعية لكل صنف ونخزنهم
-  // const itemsWithTotals = items.map((item) => {
-  //   const count = Number(item.count || 0);
-  //   const weight = Number(item.weight || 0);
-  //   const workmanship = Number(item.workmanship || 0);
-
-  //   let itemWeight = count * weight;
-
-  //   let itemWork =
-  //     item.type === "piece"
-  //       ? count * workmanship
-  //       : itemWeight * workmanship;
-  //       let weight21 = 0;
-
-  //   if (karat === 24) weight21 = (itemWeight * 999.9) / 875;
-  //   else if (karat === 21) weight21 = itemWeight;
-  //   else weight21 = (itemWeight * karat) / 875;
-
-  //   totalWeight21 += weight21;
-  //   totalWorkmanship += itemWork;
-
-  //   return {
-  //     ...item,
-  //     itemWeight,
-  //     itemWork,
-  //     karat
-      
-  //   };
-  // });
   const itemsWithTotals = items.map((item) => {
     const count = Number(item.count || 0);
     const weight = Number(item.weight || 0);
     const workmanship = Number(item.workmanship || 0);
-    const karat = Number(item.karat || 0); // ✅ مهم
-  
+
     let itemWeight = count * weight;
-  
+
     let itemWork =
       item.type === "piece"
         ? count * workmanship
         : itemWeight * workmanship;
-  
+        let weight21 = 0;
+
+    if (karat === 24) weight21 = (itemWeight * 999.9) / 875;
+    else if (karat === 21) weight21 = itemWeight;
+    else weight21 = (itemWeight * karat) / 875;
+
+    totalWeight21 += weight21;
+    totalWorkmanship += itemWork;
+
     return {
       ...item,
       itemWeight,
       itemWork,
       karat
+      
     };
   });
+
   // 🔥 الإجماليات
   let totalWeight21 = 0;
   let totalWorkmanship = 0;
@@ -673,7 +654,7 @@ export default function App() {
                 <td>
                   وزن: {fix(item.itemWeight)} <br />
                   مصنعية: {fix(item.itemWork)} <br/>
-                  عيار: {item.karat === 24 ? "24" : "21"}
+                  عيار: {هkarat === 24 ? "24" : "21"}
                 </td>
               </tr>
             ))}
