@@ -601,7 +601,7 @@ export default function App() {
     let weight21 = 0;
 
     // if (karat === 24) weight21 = (item.itemWeight * 999.9) / 875;
-    if (karat === 24) weight21 = (item.itemWeight * 24) / 21;
+    if (karat === 24) weight21 = (item.itemWeight * 2) / 875;
     else if (karat === 21) weight21 = item.itemWeight;
     else weight21 = (item.itemWeight * karat) / 875;
 
@@ -612,8 +612,7 @@ export default function App() {
   totalWeight21 += Number(oldGold || 0);
   totalWorkmanship += Number(oldWorkmanship || 0);
 
-  // const payGold24_to21 = (Number(payGold24 || 0) * 999.9) / 875;
-  const payGold24_to21 = (Number(payGold24 || 0) * 24) /21;
+  const payGold24_to21 = (Number(payGold24 || 0) * 999.9) / 875;
   const barEquivalent21 = (Number(barWeight || 0) * Number(barKarat || 0)) / 875;
   const barWorkmanship = Number(barEquivalent21 || 0) * 8;
 

@@ -613,7 +613,7 @@ export default function App() {
   totalWorkmanship += Number(oldWorkmanship || 0);
 
   // const payGold24_to21 = (Number(payGold24 || 0) * 999.9) / 875;
-  const payGold24_to21 = (Number(payGold24 || 0) * 24) /21;
+  
   const barEquivalent21 = (Number(barWeight || 0) * Number(barKarat || 0)) / 875;
   const barWorkmanship = Number(barEquivalent21 || 0) * 8;
 

@@ -605,7 +605,7 @@ export default function PrintPage() {
   // 🔥 تحويل 24 → 21
   const payGold24_to21 =
     // (Number(payGold24 || 0) * 999.9) / 875;
-    (Number(payGold24 || 0) * 24) / 21;
+    (Number(payGold24 || 0) * 24) / 875;
 
   const totalPaidGold =
     paidGold +
