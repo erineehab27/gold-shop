@@ -582,9 +582,7 @@ export default function PrintPage() {
     // if (karat === 24) weight21 = (item.itemWeight * 999.9) / 875;
     // else if (karat === 21) weight21 = item.itemWeight;
     // else weight21 = (item.itemWeight * karat) / 875;
-    if (karat === 24) weight21 = (item.itemWeight * 24) / 21;
-    else if (karat === 21) weight21 = item.itemWeight;
-    else weight21 = (item.itemWeight * karat) / 21;
+    
 
     totalWeight21 += weight21;
     totalWorkmanship += item.itemWork;
